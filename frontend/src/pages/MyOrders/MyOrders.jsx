@@ -16,6 +16,7 @@ const MyOrders = () => {
       {},
       { headers: { token } }
     );
+    console.log(response.data.data);
     setData(response.data.data);
   };
 
@@ -33,7 +34,7 @@ const MyOrders = () => {
           return (
             <div key={index} className="my-orders-order">
               <img src={assets.parcel_icon} alt="" />
-              <p>
+              <p className="order-items">
                 {order.items.map((item, index) => {
                   if (index === order.items.length - 1) {
                     return item.name + " x " + item.quantity;
@@ -43,7 +44,7 @@ const MyOrders = () => {
                 })}
               </p>
               <p>{formatDateTime(order.date)}</p>
-              <p>${order.amount}.00</p>
+              <p>₹{order.amount}.00</p>
               <p>Items: {order.items.length}</p>
               <p className={`status-badgee ${order.status.toLowerCase().replace(" ","")}`}>
                  <b>{order.status}</b>

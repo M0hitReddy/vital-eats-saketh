@@ -14,6 +14,7 @@ const placeOrder = async (req, res) => {
       userId: req.body.userId,
       items: req.body.items,
       amount: req.body.amount,
+      date: new Date(),
       address: req.body.address,
     });
     const savedOrder = await newOrder.save();
@@ -97,7 +98,7 @@ const verifyOrder = async (req, res) => {
 
 const userOrders = async (req, res) => {
   try {
-    const orders = await orderModel.find({ userId: req.body.userId });
+    const orders = await orderModel.find({ userId: req.body.userId }).sort({ date: -1 });
     res.json({ success: true, data: orders });
   } catch (error) {
     console.log(error);

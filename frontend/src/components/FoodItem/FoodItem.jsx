@@ -6,7 +6,7 @@ import { StoreContext } from "../../context/StoreContext";
 import axios from "axios";
 import { Star, StarHalf, StarHalfIcon } from "lucide-react";
 
-function FoodItem({ id, name, price, description, image, calories }) {
+function FoodItem({ id, name, price, description, image, calories, dietary }) {
   const { cartItems, addToCart, removeFromCart, url } =
     useContext(StoreContext);
   const [avgRating, setAvgRating] = useState(0);
@@ -93,7 +93,8 @@ function FoodItem({ id, name, price, description, image, calories }) {
         </div>
         <p className="namewe">{description}</p>
         <p className="namewe">{calories} cal</p>
-        <div className="flex items-center justify-between">
+        <p className="namewe">{dietary}</p>
+        <div className="bottom flex items-center justify-between">
           <p className="food-item-price">₹{price}</p>
           <a href={"/review/" + id} className="underline text-gray-500">
             ratings

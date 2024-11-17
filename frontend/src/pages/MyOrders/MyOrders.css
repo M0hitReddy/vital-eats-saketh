@@ -59,6 +59,9 @@
   font-weight: 500;
   color: #454545;
 }
+.my-orders-order .order-items {
+  justify-self: left;
+}
 .my-orders-order button {
   /* border: 1px solid #454545; */
   padding: 12px 12px;

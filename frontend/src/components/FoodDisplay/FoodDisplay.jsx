@@ -25,6 +25,7 @@ const FoodDisplay = ({ category }) => {
                 price={item.price}
                 image={item.image}
                 calories={item.calories}
+                dietary={item.dietary}
               />
             );
           }

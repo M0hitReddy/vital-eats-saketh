@@ -12,8 +12,9 @@ const PlaceOrder = () => {
     import.meta.env.VITE_APP_SERVICE_ID,
     import.meta.env.VITE_APP_TEMPLATE_ID
   );
-  const { getTotalCartAmount, token, food_list, cartItems, url, appliedPromo } =
+  const { getTotalCartAmount, token, food_list, cartItems, setCartItems, url, appliedPromo, setAppliedPromo } =
     useContext(StoreContext);
+    const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const [data, setData] = useState({
@@ -51,6 +52,7 @@ const PlaceOrder = () => {
 
   const placeOrder = async (event) => {
     event.preventDefault();
+    setLoading(true);
     let orderItems = [];
     food_list.map((item) => {
       if (cartItems[item._id] > 0) {
@@ -76,10 +78,14 @@ const PlaceOrder = () => {
         from_name: "vital eats",
         order_id: response.data.orderId,
       });
+      setCartItems({});
+      setAppliedPromo(null);
+      setLoading(false);
       toast.success(response.data.message);
       navigate("/track-order/" + response.data.orderId);
       // window.location.replace("myorders");
     } else {
+      setLoading(false);
       alert("Error");
     }
   };
@@ -214,7 +220,7 @@ const PlaceOrder = () => {
               <b>₹{getFinalTotal()}</b>
             </div>
           </div>
-          <button type="submit">PROCEED</button>
+          <button type="submit">{loading ? "Placing order..." : "PROCEED"}</button>
         </div>
       </div>
     </form>
