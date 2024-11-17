@@ -1,0 +1,170 @@
+
+
+/* PromoCode.css */
+.promocode-container {
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+    /* color: var(--light-text); */
+    /* color: var(--text-color); */
+  }
+  
+  .promocode-form-section,
+  .promocode-list-section {
+    flex: 1;
+    /* background: var(--background-color); */
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  }
+
+  .promocode-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .promocode-form-section h2,
+  .promocode-list-section h2 {
+    margin-bottom: 20px;
+    /* color: var(--text-color); */
+    font-size: 1.5rem;
+  }
+  
+  .promocode-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+    /* color: var(--text-color); */
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 8px 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 1rem;
+    /* background-color: var(--input-background);
+    color: var(--text-color); */
+  }
+  
+  .submit-btn {
+    /* background-color: var(--button-background);
+    color: var(--text-color); */
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+  }
+  
+  .submit-btn:hover {
+    /* background-color: var(--button-hover-background); */
+  }
+  
+  .promocode-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .promocode-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    /* background-color: var(--promocode-item-background); */
+    border-radius: 6px;
+    /* border: 1px solid var(--promocode-item-border); */
+  }
+
+  .promocode-item:hover {
+    background-color: rgba(128, 128, 128, 0.219);
+    transition: background-color 0.5s;
+  }
+  
+ 
+  
+  .promocode-details h3 {
+    margin: 0;
+    /* color: var(--text-color); */
+    font-size: 1.1rem;
+  }
+  
+  .promocode-details p {
+    margin: 0;
+    /* color: var(--text-color); */
+  }
+  
+  .status-badge {
+    display: inline-block;
+    width: max-content;
+    padding: 4px 20px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+  }
+  
+  .status-badge.active {
+    background-color: var(--status-active-background);
+    color: var(--status-active-color);
+  }
+  
+  .status-badge.inactive {
+    background-color: var(--status-inactive-background);
+    color: var(--status-inactive-color);
+  }
+  
+  .promocode-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .toggle-btn,
+  .delete-btn {
+    padding: 6px 12px;
+    background-color: transparent;
+    
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+  }
+  
+  .toggle-btn {
+    /* background-color: var(--input-background);
+    color: var(--text-color); */
+  }
+  
+  .delete-btn {
+    /* background-color: var(--status-inactive-background); */
+    /* color: var(--status-inactive-color); */
+  }
+  
+  .toggle-btn:hover {
+    /* background-color: var(--input-border); */
+  }
+  
+  .delete-btn:hover {
+    /* background-color: var(--status-inactive-background); */
+  }
+  
+  @media (max-width: 768px) {
+    .promocode-container {
+      flex-direction: column;
+    }
+  }

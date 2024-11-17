@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Outfit;
+}
+
+body{
+  min-height: 100vh;
+  background-color: var(--body-color);
+}
+
+a{
+  text-decoration: none;
+  color: inherit
+}
+
+hr{
+  border: none;
+  height: 1px;
+  background-color: #a9a9a9;
+}
+
+.app-content{
+  display: flex;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* 
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --input-background: #ffffff;
+  --input-border: #dddddd;
+  --button-background: tomato;
+  --button-hover-background: #e13616;
+  --promocode-item-background: #f8f9fa;
+  --promocode-item-border: #eeeeee;
+  --status-active-background: #e6f4ea;
+  --status-active-color: #137333;
+  --status-inactive-background: #fce8e6;
+  --status-inactive-color: #c5221f;
+}
+
+.dark-theme {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --input-background: #333333;
+  --input-border: #555555;
+  --button-background: #bb86fc;
+  --button-hover-background: #9b59b6;
+  --promocode-item-background: #333333;
+  --promocode-item-border: #444444;
+  --status-active-background: #2e7d32;
+  --status-active-color: #a5d6a7;
+  --status-inactive-background: #c62828;
+  --status-inactive-color: #ef9a9a;
+} */

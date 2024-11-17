@@ -1,0 +1,28 @@
+.review-form {
+  display: flex;
+  flex-direction: column;
+  color: var(--light-text);
+  gap: 20px;
+}
+
+.review-form textarea {
+  padding: 8px 12px;
+  /* border: 2px solid var(--input-border); */
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: var(--input-color);
+  color: var(--text-color);
+}
+
+.cant {
+  background-color: var(--border-color);
+  color: var(--light-text-secondary);
+}
+
+.divide-y > div {
+  border-color: gray;
+}
+
+.user-image {
+  background-color: var(--border-color);
+}
