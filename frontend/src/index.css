@@ -18,9 +18,11 @@ a{
   color: inherit;
 }
 
-.app{
+.app .appin{
+  /* overflow-x: hidden; */
   width: 80%;
   margin: auto;
+  /* display: relative; */
 }
 
 @keyframes fadeIn {

@@ -24,10 +24,18 @@ const Footer = () => {
         <div className="footer-content-center">
           <h2>COMPANY</h2>
           <ul>
-            <li>Home</li>
-            <li>About us</li>
-            <li>Delivery</li>
-            <li>Privacy Policy</li>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="/aboutus">About us</a>
+            </li>
+            <li>
+              <a href="#">Delivery</a>
+            </li>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
           </ul>
         </div>
         <div className="footer-content-right">

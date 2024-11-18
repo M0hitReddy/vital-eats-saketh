@@ -1,0 +1,15 @@
+.aboutus :is(p, ol) {
+    color: var(--light-text);
+    font-size: 1.2rem;
+}
+
+.aboutus h2 {
+    color: var(--light-text);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.aboutus ol {
+    list-style-type: disc;
+    /* font-weight: bold; */
+}
