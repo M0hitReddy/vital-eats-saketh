@@ -44,7 +44,7 @@ function FoodItem({ id, name, price, description, image, calories, dietary }) {
           src={image === "" ? assets.no_image : url + "/images/" + image}
           alt=""
         />
-        {!cartItems[id] ? (
+        {!cartItems || !cartItems[id] ? (
           <img
             className="add"
             onClick={() => addToCart(id)}
